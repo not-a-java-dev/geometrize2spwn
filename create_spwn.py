@@ -7,7 +7,7 @@ file.close()
 
 def convert_to_gd_hsv(red, green, blue, sChecked, vChecked):
     hsv = colorsys.rgb_to_hsv(red/float(255), green/float(255), blue/float(255))
-    gd_hsv = f"{hsv[0]*360}a{hsv[1]}a{hsv[2]}"
+    gd_hsv = f"{hsv[0]*float(360)}a{hsv[1]}a{hsv[2]}"
     if sChecked:
         gd_hsv += "a1"
     else:
